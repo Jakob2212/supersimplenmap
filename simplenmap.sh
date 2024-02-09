@@ -18,17 +18,17 @@ if [ $? -eq 0 ]; then
 	echo "Host available"
 	echo
 	echo
-# Ask for Nmap  flags saving it to the "flags" variable
-	echo "Type Nmap flags"
+# Ask for Nmap flags, saving it to the "flags" variable
+	echo "Type Nmap flags. Remember the -"
 	read flags
 	echo
-# Ask for Nmap  flags saving it to the "output" variable	
+# Ask for output filename and extension, saving it to the "output" variable	
 echo "Type name of output file (filename.file-ext)"
 	read output
-# Running Nmap with e ntered variables
+# Running Nmap with flag, ip and output variables
 	nmap $flag $ip -oN $output
-# Based on the ping, the host is assumed to be down
+# Based on the ping, the host is assumed to be down and closing down
 else
-echo "$ping failed - host may be unavailable"
+echo "Ping failed - Host may be unavailable"
 
 fi
