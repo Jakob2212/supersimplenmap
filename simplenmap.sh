@@ -27,7 +27,7 @@ echo "Type name of output file (filename.file-ext)"
 	read output
 # Running Nmap with flag, ip and output variables
 	nmap $flag $ip -oN $output
-# Based on the ping, the host is assumed to be down and closing down
+# Based on the ping, the host is assumed to be down.
 else
 echo "Ping failed - Host may be unavailable"
 
